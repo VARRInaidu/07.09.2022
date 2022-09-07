@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int fib(int);
+int main()
+{
+int k,u=0;
+printf("enter the no of fib series");
+scanf("%d",&k);
+int i,s;
+int a[k];
+a[0]=0;
+a[1]=1;
+for(i=2;i<k;i++)
+{
+a[i]=a[i-1]+a[i-2];
+} 
+printf("enter the search element ");
+scanf("%d",&s);
+for(i=0;i<k;i++)
+{
+if(a[i]==s)
+{
+printf("YES");
+u=1;;
+break;
+}
+} 
+if(u!=1)
+printf("NO");
+}
+
